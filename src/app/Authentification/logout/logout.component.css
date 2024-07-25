@@ -1,0 +1,26 @@
+.button-logout {
+    font-size: 14px; /* Taille de la police */
+    padding: 6px 12px; /* Rembourrage */
+    border-radius: 4px;
+    background-color: #f1c40f; /* Jaune */
+    color: #2c3e50; /* Gris foncé pour le texte */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px; /* Largeur fixe du bouton */
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .button-logout:hover {
+    background-color: #d4ac0d; /* Jaune plus foncé au survol */
+  }
+  
+  .button-container {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  
+ 
+  

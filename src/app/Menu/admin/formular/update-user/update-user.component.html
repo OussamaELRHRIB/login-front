@@ -1,0 +1,17 @@
+<div class="logo-container">
+  <img src="../../../assets/image/image.png" alt="Wafacash">
+</div>
+<div class="form-container">
+    <h2>Modification d'utilisateur</h2>
+    <form (submit)="submitForm()">
+      <label>Nom:</label>
+      <input type="text" [(ngModel)]="user.name" name="name" required>
+  
+      <label>Rôle:</label>
+      <input type="text" [(ngModel)]="user.role" name="role" required>
+  
+      <!-- Ajoutez d'autres champs nécessaires pour votre formulaire -->
+  
+      <button type="submit">Modifier Utilisateur</button>
+    </form>
+  </div>

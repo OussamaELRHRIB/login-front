@@ -1,0 +1,336 @@
+<router-outlet></router-outlet>
+<body>
+  <app-logout></app-logout>
+
+  <div class="logo-container">
+    <img src="../../../assets/image/image.png" alt="Wafacash">
+</div>
+<div class="container mt-5">
+  <form [formGroup]="transferForm" (ngSubmit)="AddTransfer()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="trx_id_ext">Transaction ID</label>
+          <input type="text" class="form-control" id="trx_id_ext" formControlName="trx_id_ext" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sending_country">Sending Country</label>
+          <input type="text" class="form-control" id="sending_country" formControlName="sending_country" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add other form fields in a similar manner -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="iso_currency_code">Currency Code</label>
+          <input type="text" class="form-control" id="iso_currency_code" formControlName="iso_currency_code" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="trx_rate">Transaction Rate</label>
+          <input type="number" class="form-control" id="trx_rate" formControlName="trx_rate" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_currency">Sender Currency</label>
+          <input type="text" class="form-control" id="sender_currency" formControlName="sender_currency" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_first_name">Sender First Name</label>
+          <input type="text" class="form-control" id="sender_first_name" formControlName="sender_first_name" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_city">Sender City</label>
+          <input type="text" class="form-control" id="sender_city" formControlName="sender_city">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_last_name">Sender Last Name</label>
+          <input type="text" class="form-control" id="sender_last_name" formControlName="sender_last_name" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_adress">Sender Address</label>
+          <input type="text" class="form-control" id="sender_adress" formControlName="sender_adress">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_datebirth">Sender Date of Birth</label>
+          <input type="date" class="form-control" id="sender_datebirth" formControlName="sender_datebirth">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_birth_place">Sender Birth Place</label>
+          <input type="text" class="form-control" id="sender_birth_place" formControlName="sender_birth_place">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_pip">Sender ID</label>
+          <input type="text" class="form-control" id="sender_pip" formControlName="sender_pip">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_pip_issue_date">Sender ID Issue Date</label>
+          <input type="date" class="form-control" id="sender_pip_issue_date" formControlName="sender_pip_issue_date">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_tip">Sender Type ID</label>
+          <input type="text" class="form-control" id="sender_tip" formControlName="sender_tip">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_nationality">Sender Nationality</label>
+          <input type="text" class="form-control" id="sender_nationality" formControlName="sender_nationality" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_amount_sent">Sender Amount Sent</label>
+          <input type="number" class="form-control" id="sender_amount_sent" formControlName="sender_amount_sent" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_telephone">Sender Telephone</label>
+          <input type="text" class="form-control" id="sender_telephone" formControlName="sender_telephone">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_fees_sent">Sender Fees Sent</label>
+          <input type="number" class="form-control" id="sender_fees_sent" formControlName="sender_fees_sent">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_currency">Receiver Currency</label>
+          <input type="text" class="form-control" id="receiver_currency" formControlName="receiver_currency" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_first_name">Receiver First Name</label>
+          <input type="text" class="form-control" id="receiver_first_name" formControlName="receiver_first_name" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_last_name">Receiver Last Name</label>
+          <input type="text" class="form-control" id="receiver_last_name" formControlName="receiver_last_name" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_birth_place">Receiver Birth Place</label>
+          <input type="text" class="form-control" id="receiver_birth_place" formControlName="receiver_birth_place">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_adress">Receiver Address</label>
+          <input type="text" class="form-control" id="receiver_adress" formControlName="receiver_adress">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_datebirth">Receiver Date of Birth</label>
+          <input type="date" class="form-control" id="receiver_datebirth" formControlName="receiver_datebirth">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_pip">Receiver ID</label>
+          <input type="text" class="form-control" id="receiver_pip" formControlName="receiver_pip">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_tip">Receiver Type ID</label>
+          <input type="text" class="form-control" id="receiver_tip" formControlName="receiver_tip">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_telephone">Receiver Telephone</label>
+          <input type="text" class="form-control" id="receiver_telephone" formControlName="receiver_telephone">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_nationality">Receiver Nationality</label>
+          <input type="text" class="form-control" id="receiver_nationality" formControlName="receiver_nationality">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_amount_sent">Receiver Amount Sent</label>
+          <input type="number" class="form-control" id="receiver_amount_sent" formControlName="receiver_amount_sent" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Code_Purpose_transf">Code Purpose Transfer</label>
+          <input type="text" class="form-control" id="Code_Purpose_transf" formControlName="Code_Purpose_transf">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Canal">Canal</label>
+          <input type="text" class="form-control" id="Canal" formControlName="Canal" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Login">Login</label>
+          <input type="text" class="form-control" id="Login" formControlName="Login" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="settlement_amount_sent">Settlement Amount Sent</label>
+          <input type="number" class="form-control" id="settlement_amount_sent" formControlName="settlement_amount_sent">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="settlement_amount_received">Settlement Amount Received</label>
+          <input type="number" class="form-control" id="settlement_amount_received" formControlName="settlement_amount_received">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="sender_amount_received">Sender Amount Received</label>
+          <input type="number" class="form-control" id="sender_amount_received" formControlName="sender_amount_received">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="receiver_amount_received">Receiver Amount Received</label>
+          <input type="number" class="form-control" id="receiver_amount_received" formControlName="receiver_amount_received" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="trx_type">Transaction Type</label>
+          <select class="form-control" id="trx_type" formControlName="trx_type" (change)="onTransferTypeChange()" required>
+            <option value="0">Cash Pick-up</option>
+            <option value="1">Cash to Account</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="showBbanField">
+        <div class="form-group">
+          <label for="trx_bban">Transaction BBAN</label>
+          <input type="text" class="form-control" id="trx_bban" formControlName="trx_bban">
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue adding form fields -->
+    
+
+    <button type="submit"  class="btn btn-primary mt-3">Submit</button>
+  </form>
+
+
+  <!-- Success message -->
+  <div *ngIf="successMessage" class="alert alert-success mt-3">
+    {{ successMessage }} (Return Code: {{ returnCode }})
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }} (Return Code: {{ returnCode }})
+  </div>
+</div>
+</body>
+
+
+

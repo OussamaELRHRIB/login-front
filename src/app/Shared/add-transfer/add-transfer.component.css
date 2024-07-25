@@ -1,0 +1,56 @@
+
+button{
+  background-color: #fcd425;
+  border-color: #ffdb3b;
+  color: black;
+}
+button:hover {
+  background-color: black;
+  border-color: black; 
+  color: white; 
+}
+.logo-container {
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+}
+
+.logo-container img {
+  max-width: 200px; 
+  height: auto; 
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: gray; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.form-group {
+  margin-bottom: 1.5rem; 
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  padding: 15px; 
+  transition: border-color 0.3s; 
+}
+
+.form-group label {
+  display: block; 
+  font-weight: bold; 
+  margin-bottom: 0.5rem; 
+  color: #333; 
+}
+
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+  

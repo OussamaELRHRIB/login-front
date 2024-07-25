@@ -1,0 +1,52 @@
+  <!-- <div class="row d-flex">
+      <div class="left">
+          <img src="path/to/your/image.png" alt="Wafacash Map">
+      </div>
+      <div class="right">
+          <div class="login-box">
+              <div class="logo">
+                  <img src="../../../assets/image/wafacash2x_1.png" alt="Wafacash Logo">
+                  <h1>Wafacash</h1>
+              </div>
+              <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                  <div class="input-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" placeholder="Entrez l'email">
+                  </div>
+                  <div class="input-group">
+                      <label for="password">Mot de passe</label>
+                      <input type="password" id="password" placeholder="Entrez le mot de passe">
+                  </div>
+                  <button type="submit">Connexion</button>
+              </form>
+          </div>
+      </div>
+  </div> -->
+
+
+  <div class="row maxheigt">
+    <div class="col-md-8 bg-img">
+      <img src="../../../assets/image/authentication-bg.png" alt="Wafacash Map" class="Wafacash-Map">
+    </div>
+    <div class="col-md-4 p-5">
+      <div class="logo">
+        <img src="../../../assets/image/wafacash2x_1.png" alt="Wafacash Logo">
+        <h1>Wafacash</h1>
+      </div>
+      <form (ngSubmit)="loginUser()" [formGroup]="loginForm">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" formControlName="email" placeholder="Entrez l'email">
+        </div>
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" formControlName="password" placeholder="Entrez le mot de passe">
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Connexion</button>
+      </form>
+      <div *ngIf="loginFailed" class="error-message">
+        Invalid username or password.
+      </div>
+    </div>
+  </div>
+  

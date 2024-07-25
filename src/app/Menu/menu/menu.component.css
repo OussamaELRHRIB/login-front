@@ -1,0 +1,61 @@
+/* Styles pour la bande grise du menu */
+.grey-band {
+  background-color: #bdc3c7; /* Gris clair */
+  height: 40px;
+  width: 100%;
+}
+
+/* Styles pour le conteneur du logo */
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.logo-container img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Styles pour le conteneur des cartes */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 200px;
+}
+
+/* Styles pour les cartes */
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Blanc */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #f1c40f; /* Jaune */
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #2c3e50; /* Gris foncé */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #7f8c8d; /* Gris moyen */
+}
+
+/* Ajustement pour les écrans plus petits */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

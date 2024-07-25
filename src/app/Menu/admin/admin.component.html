@@ -1,0 +1,32 @@
+<body>
+  <app-logout></app-logout>
+   <div class="logo-container">
+      <img src="../../../assets/image/image.png" alt="Wafacash">
+    </div>
+    <div class="admin-container">
+        <button class="action-button add-button" (click)="addUser()">Ajouter</button>
+        <!-- Tableau pour afficher la liste des utilisateurs -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Rôle</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Exemple d'élément de la liste -->
+            <tr *ngFor="let user of users">
+              <td>{{ user.name }}</td>
+              <td>{{ user.role }}</td>
+              <td>
+                <!-- Boutons d'action -->
+                <button class="action-button edit-button" (click)="editUser(user)">Modifier</button>
+                <button class="action-button delete-button" (click)="deleteUser(user)">Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </body>
+  
